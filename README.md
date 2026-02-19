@@ -1,24 +1,24 @@
 Defect Lifecycle Simulation
 
-This repository demonstrates a structured, end-to-end simulation of a real-world defect lifecycle within an Agile SDLC environment.
+This repository presents a structured, end-to-end simulation of a real-world defect lifecycle within an Agile SDLC environment.
 
-The goal is not only to document defects, but to model realistic defect flow, ownership, escalation paths, and resolution patterns as seen in enterprise-level QA processes.
+Rather than merely documenting defects, this project models realistic defect flow, ownership, escalation paths, traceability, and resolution patterns typical of enterprise QA processes.
 
 ⸻
 
 What This Project Demonstrates
 
-The repository simulates how defects are:
-	•	Reported with structured metadata
-	•	Triaged and prioritized
-	•	Assigned to engineering
-	•	Moved across lifecycle states
-	•	Fixed and validated
-	•	Retested and regression-verified
-	•	Closed after confirmation
+This repository simulates how defects are:
+	•	Reported with structured and versioned metadata
+	•	Triaged based on severity and business priority
+	•	Assigned to engineering with clear ownership
+	•	Transitioned across lifecycle states
+	•	Fixed with implementation traceability
+	•	Retested and regression-validated
+	•	Closed after verification
 	•	Reopened when incomplete fixes are identified
-	•	Escalated to hotfix in production scenarios
-	•	Analyzed via postmortem documentation
+	•	Escalated as production hotfix incidents
+	•	Analyzed through structured postmortem documentation
 
 ⸻
 
@@ -28,23 +28,23 @@ Open
 → In Progress
 → Fixed (Ready for Retest)
 → Closed
-→ Reopened (if needed)
+→ Reopened (if required)
 → Escalated (Hotfix Scenario)
 → Final Resolution
 
-Note: Some defects intentionally pass through multiple iterations (reopen / hotfix / postmortem) to demonstrate lifecycle maturity rather than a simple linear fix.
+Some defects intentionally pass through multiple iterations (reopen / hotfix / postmortem) to reflect lifecycle maturity rather than a simple linear fix model.
 
 ⸻
 
 Tooling Simulation Approach
 
 This project models a hybrid workflow:
-	•	Markdown artifacts simulate internal defect tracking documentation.
-	•	GitHub Issues simulate defect reporting and collaboration.
-	•	Pull Requests simulate implementation and fix validation.
-	•	Issue–PR linking (Closes #...) demonstrates traceability.
+	•	Markdown artifacts simulate structured internal defect documentation
+	•	GitHub Issues simulate defect reporting and collaboration
+	•	Pull Requests simulate implementation, review, and fix validation
+	•	Issue–PR linking (Closes #...) demonstrates traceability
 
-This mirrors real-world environments where multiple tools are used in parallel (e.g., Jira + GitHub).
+This mirrors real-world environments where defect tracking (e.g., Jira) and code management (e.g., GitHub) operate in parallel.
 
 ⸻
 
@@ -60,7 +60,8 @@ docs/
   BUG-001-postmortem.md
 
 screenshots/
-Each defect transitions between folders to reflect its lifecycle state.
+
+Defects transition between folders to reflect their lifecycle state at any given stage.
 
 ⸻
 
@@ -70,7 +71,7 @@ Concepts Demonstrated
 	•	Regression impact analysis
 	•	Root Cause documentation (initial and revised)
 	•	Production incident escalation (Hotfix model)
-	•	Postmortem reporting structure
+	•	Structured postmortem reporting
 	•	QA–Dev collaboration simulation
 	•	Traceability between defect, fix, and verification
 
@@ -83,6 +84,14 @@ The objective of this repository is to demonstrate:
 	•	Process awareness beyond test case writing
 	•	Defect lifecycle ownership
 	•	Clear documentation standards
-	•	Understanding of release risk and impact
+	•	Understanding of release risk and production impact
 
 This project reflects QA process maturity aligned with enterprise Agile environments.
+
+⸻
+
+How to Review This Project
+	1.	Start from the Issues tab to review defect reporting and triage decisions.
+	2.	Examine branch history to observe lifecycle state transitions.
+	3.	Review Pull Requests to inspect implementation details and validation summaries.
+	4.	Inspect commit history to analyze how documentation evolves through lifecycle stages.
