@@ -1,7 +1,7 @@
 # BUG-001 – Login returns NullPointerException
 
 ## Status
-Open
+In Progress
 
 ## Severity
 High
