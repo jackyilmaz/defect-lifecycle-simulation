@@ -9,7 +9,7 @@
 ---
 
 ## Status
-Open
+In-progress
 
 ## Severity
 Low
@@ -50,6 +50,11 @@ Validation message displays incorrect spelling: "Passwrod is required."
 
 ## Business Impact
 Impacts brand credibility and user trust in production environment.
+
+---
+
+## Assigned To
+jackyilmaz (simulated)
 
 ---
 
