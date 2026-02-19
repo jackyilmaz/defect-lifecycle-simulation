@@ -11,7 +11,7 @@
 ---
 
 ## Status
-Closed
+Reopened
 
 ## Severity
 High
@@ -97,6 +97,12 @@ v1.4.3-QA
 - Session initialization validated
 - Dashboard redirect confirmed
 - Token generation flow verified
+
+---
+
+## Reopen Reason
+Additional edge case identified during extended testing:
+After three failed login attempts, a valid login still triggers session initialization error.
 
 ---
 
