@@ -66,65 +66,13 @@ Stack trace indicates failure during session object initialization inside the au
 
 ---
 
-## Root Cause (Simulated)
-Backend service fails to validate a null session object before proceeding with authentication logic.
+## Initial Root Cause (Under Investigation)
+Authentication flow does not validate session object before proceeding with login logic.
 
 ---
 
-## Fix Summary
-- Added null validation for session object initialization
-- Implemented defensive null check before authentication flow
-- Prevented application crash by handling null session state
-- Added unit test for null session scenario
-
----
-
-## Fix Version
-v1.4.3-QA
-
----
-
-## Retest Notes
-- Retested in QA environment (v1.4.3-QA)
-- Login successful with valid credentials
-- No NullPointerException observed
-- Negative test: empty session handled correctly
-- Related authentication flows validated
-
----
-
-## Regression Impact
-- Session initialization validated
-- Dashboard redirect confirmed
-- Token generation flow verified
-
----
-
-## Reopen Reason
-Additional edge case identified during extended testing:
-After three failed login attempts, a valid login still triggers session initialization error.
-
----
-
-## Escalation Level
-Production Incident
-
-## Impact Level
-Critical – Users unable to login
-
-## Hotfix Decision
-Bug prioritized as immediate hotfix outside sprint cycle.
-
-## Root Cause (Revised)
-Session state lock mechanism fails after multiple failed login attempts due to improper retry counter reset.
-
-## Hotfix Implementation Plan
-- Patch authentication retry logic
-- Reset session object after lock threshold
-- Add integration test for retry scenario
-- Deploy to staging for urgent validation
-
----
-
-## Risk Assessment
-High impact on user login flow. Critical for release stability.
+## Proposed Fix Plan
+- Add null validation for session object initialization  
+- Implement defensive check before authentication processing  
+- Add unit test covering null session scenario  
+- Validate fix in QA before hotfix promotion
