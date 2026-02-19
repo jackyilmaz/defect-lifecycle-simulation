@@ -11,7 +11,7 @@
 ---
 
 ## Status
-Fixed (Ready for Retest)
+Closed
 
 ## Severity
 High
@@ -100,3 +100,20 @@ v1.4.3-QA
 - Session initialization
 - Dashboard redirect
 - Token generation
+
+  ---
+
+## QA Retest Result
+Retest performed on build v1.4.3-QA.
+
+- Login successful with valid credentials
+- No NullPointerException observed in logs
+- Retry scenario validated
+- No regression detected in authentication module
+
+Result: PASS
+
+---
+
+## Final Status
+Closed
