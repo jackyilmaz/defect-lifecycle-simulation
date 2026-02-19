@@ -11,7 +11,7 @@
 ---
 
 ## Status
-Fixed
+Closed
 
 ## Severity
 High
@@ -85,15 +85,18 @@ v1.4.3-QA
 ---
 
 ## Retest Notes
-(To be updated after fix verification)
+- Retested in QA environment (v1.4.3-QA)
+- Login successful with valid credentials
+- No NullPointerException observed
+- Negative test: empty session handled correctly
+- Related authentication flows validated
 
 ---
 
 ## Regression Impact
-- Authentication module
-- Session management
-- User dashboard access
-- Token generation workflow
+- Session initialization validated
+- Dashboard redirect confirmed
+- Token generation flow verified
 
 ---
 
