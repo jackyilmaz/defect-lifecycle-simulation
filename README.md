@@ -1,30 +1,62 @@
 # Defect Lifecycle Simulation
 
-This repository simulates a real-world defect lifecycle process in an Agile SDLC environment.
+This repository demonstrates a structured simulation of a real-world defect lifecycle in an Agile SDLC environment.
 
-## Objective
-To demonstrate how bugs are:
+It showcases how defects are:
+
 - Reported
 - Triaged
 - Assigned
 - Fixed
 - Retested
 - Closed
-- Reopened (if necessary)
-
-## Scope
-The simulation includes:
-- Structured bug reports
-- Status transitions
-- Root cause analysis
-- Retest documentation
-- Regression impact assessment
-
-## Tools Simulated
-- Jira-style defect tracking
-- Agile Scrum workflow
-- QA to Dev collaboration
+- Reopened
+- Escalated to Hotfix
+- Analyzed via Postmortem
 
 ---
 
-This project is designed as a portfolio demonstration of professional QA documentation standards.
+## Simulated Workflow
+
+Open  
+→ In Progress  
+→ Fixed  
+→ Closed  
+→ Reopened  
+→ Escalated (Hotfix)  
+→ Final Resolution  
+
+---
+
+## Repository Structure
+bugs/
+open/
+in-progress/
+fixed/
+closed/
+
+docs/
+defect-workflow-diagram.md
+BUG-001-postmortem.md
+
+screenshots/
+
+---
+
+## Concepts Demonstrated
+
+- Severity vs Priority differentiation
+- Duplicate bug triage
+- Regression impact analysis
+- Root Cause documentation
+- Production incident escalation
+- Postmortem reporting
+- QA–Dev collaboration simulation
+
+---
+
+## Objective
+
+To demonstrate process maturity and understanding of defect lifecycle management beyond basic test case writing.
+
+This project reflects structured QA thinking aligned with enterprise Agile environments.
