@@ -11,7 +11,7 @@
 ---
 
 ## Status
-Reopened
+In Progress (Hotfix)
 
 ## Severity
 High
@@ -103,6 +103,26 @@ v1.4.3-QA
 ## Reopen Reason
 Additional edge case identified during extended testing:
 After three failed login attempts, a valid login still triggers session initialization error.
+
+---
+
+## Escalation Level
+Production Incident
+
+## Impact Level
+Critical – Users unable to login
+
+## Hotfix Decision
+Bug prioritized as immediate hotfix outside sprint cycle.
+
+## Root Cause (Revised)
+Session state lock mechanism fails after multiple failed login attempts due to improper retry counter reset.
+
+## Hotfix Implementation Plan
+- Patch authentication retry logic
+- Reset session object after lock threshold
+- Add integration test for retry scenario
+- Deploy to staging for urgent validation
 
 ---
 
