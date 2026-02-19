@@ -1,7 +1,7 @@
 # BUG-003 – Incorrect Password Validation Text
 
 ## Status
-Open
+Closed (Duplicate)
 
 ## Severity
 Low
@@ -30,3 +30,11 @@ Correct validation text displayed.
 
 ## Actual Result
 Text appears incorrect.
+
+---
+
+## Triage Decision
+Marked as Duplicate of BUG-002.
+
+## Resolution
+Closed – Duplicate
