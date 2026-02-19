@@ -1,4 +1,14 @@
-# BUG-001 – Login returns NullPointerException
+# BUG-001 – Login Returns NullPointerException
+
+## Metadata
+- Reported By: QA Team
+- Reported Date: 2026-02-19
+- Assigned To: Backend Team
+- Module: Authentication
+- Build Version: v1.4.2-QA
+- Sprint: Sprint 12
+
+---
 
 ## Status
 In Progress
@@ -9,38 +19,83 @@ High
 ## Priority
 High
 
+---
+
 ## Environment
 - Application: Demo Web App
 - Environment: QA
 - Browser: Chrome 121
-- OS: macOS
+- OS: macOS Sonoma
+- Database: MySQL 8.0
+- API Version: v2/auth
+
+---
 
 ## Description
-User receives a NullPointerException when attempting to login with valid credentials.
+A NullPointerException is thrown when a user attempts to log in using valid credentials. The system fails before completing the authentication flow, resulting in login failure.
+
+---
 
 ## Preconditions
-- User account exists in database
+- User account exists in the database
 - Application server is running
+- Authentication service is deployed
+- No active session exists for the user
+
+---
 
 ## Steps to Reproduce
-1. Navigate to login page
-2. Enter valid username and password
+1. Navigate to the login page  
+2. Enter a valid username and password  
 3. Click "Login"
 
+---
+
 ## Expected Result
-User should be successfully authenticated and redirected to dashboard.
+User should be successfully authenticated and redirected to the dashboard without any server-side exception.
+
+---
 
 ## Actual Result
-Application throws NullPointerException and login fails.
+Application throws a NullPointerException during authentication processing and login fails.
+
+---
+
+## Technical Observation
+Stack trace indicates failure during session object initialization inside the authentication service.
+
+---
 
 ## Root Cause (Simulated)
-Backend service fails to validate null session object before authentication.
+Backend service fails to validate a null session object before proceeding with authentication logic.
 
-## Fix Summary (To be updated later)
+---
 
-## Retest Notes (To be updated later)
+## Fix Plan
+- Add null validation for session object before authentication flow
+- Implement defensive coding around session initialization
+- Add unit test to validate null session handling
+- Update API contract validation
+
+---
+
+## Fix Version
+(To be updated after deployment)
+
+---
+
+## Retest Notes
+(To be updated after fix verification)
+
+---
 
 ## Regression Impact
-Authentication module
-Session management
-User dashboard access
+- Authentication module
+- Session management
+- User dashboard access
+- Token generation workflow
+
+---
+
+## Risk Assessment
+High impact on user login flow. Critical for release stability.
